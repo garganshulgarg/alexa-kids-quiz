@@ -1,0 +1,5 @@
+#if( $speachText == "levelMsg" )
+Sorry, I didn't receive any input. Do you want to resume the quiz?
+#elseif( $speachText == "error" )
+	Good Bye!
+#end

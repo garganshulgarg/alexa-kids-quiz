@@ -1,0 +1,24 @@
+#if($repeatText == "repeat")
+{
+	Your question is: $question
+}
+#elseif( $repeatText == "notrepeat" )
+{
+#if( $answerValue == "correctAnswer" )
+  #set ($ansVal =  "<audio src=""soundbank://soundlibrary/gameshow/gameshow_01""/> Fabulous! Your answer is correct. 
+  You earned another score. Your current score is $score.")
+#elseif( $answerValue == "incorrectAnswer" )
+  #set ($ansVal = "<audio src=""soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02""/> Your answer is incorrect. The correct answer is $answer. Your current score is $score. ")
+#end
+
+#if( $speachName == "nextQuestion" )
+  	$ansVal Your next question is: $question
+#elseif( $speachName == "end" )
+  	$ansVal Congratulations on a great day playing Kids Quiz! You earned $score stars today. It was so much fun to play with you. I hope you had fun with me too. Come back again to play more. I will be waiting. Do you want to exit?
+#elseif( $speachName == "error" )	
+	Sorry, I am unable to understand. For help, say Help.		
+#end
+}
+#end
+
+

@@ -1,0 +1,3 @@
+#if( $speechText == "displayMsg" )
+ 	Sorry, You can only repeat questions. For help, say Help.
+#end

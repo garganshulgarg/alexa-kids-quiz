@@ -1,0 +1,5 @@
+#if( $speachText == "startAgain" )
+Sorry, I didn't receive any input. For help say help.
+#elseif( $speachText == "exit" )
+	Good Bye!
+#end

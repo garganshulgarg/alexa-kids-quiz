@@ -1,0 +1,7 @@
+#if( $speachName == "end" )
+  	 Sorry, I didn't receive any input. Do you want to exit?
+#elseif( $speachName == "error" )	
+	Good Bye!
+#else
+	Sorry, I didn't receive any input. Do you want to resume the quiz?
+#end

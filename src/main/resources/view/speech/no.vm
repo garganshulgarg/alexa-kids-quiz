@@ -1,0 +1,5 @@
+#if( $speachText == "startAgain" )
+We shall start the quiz again. <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_intro_01"/> Hello Kids, Welcome to the land of Mr. Quiz. Mr. Quiz loves to play with kids. He will ask you 5 questions and you have to give answers. You can say like start Math Quiz or start GK Quiz.
+#elseif( $speachText == "exit" )
+	Good Bye!
+#end

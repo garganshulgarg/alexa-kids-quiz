@@ -1,0 +1,11 @@
+#if( $speachText == "levelMsg" )
+ 	Let's start Level $levelNumber of $quizName Quiz.
+ 	I will ask you 5 questions. Please provide the answer.
+ 	Try to get as many right as you can and garb a chance to earn more stars.
+ 	To repeat the question just say repeat. 
+	Here is your first question: 
+	<audio src="soundbank://soundlibrary/musical/amzn_sfx_drum_and_cymbal_02"/>
+	$question
+#elseif( $speachText == "error" )
+	Sorry, I am unable to understand. For help, say Help.
+#end

@@ -1,0 +1,90 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "hybris",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "WelcomeHybrisIntent",
+                    "slots": [],
+                    "samples": [
+                        "welcome hybris",
+                        "say hello",
+                        "say hello Hybris",
+                        "hello",
+                        "say hi",
+                        "say hi hybris",
+                        "hi",
+                        "how are you"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ProductSearchIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Hybris please find best {query} for me",
+                        "find {query}",
+                        "Hybris find {query} ",
+                        "Hybris find best {query} for me"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CartDetailsIntent",
+                    "slots": [],
+                    "samples": [
+                        "go to cart",
+                        "cart details",
+                        "What i have in my cart"
+                    ]
+                },
+                {
+                    "name": "AddToCartIntent",
+                    "slots": [
+                        {
+                            "name": "position",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "add {position}",
+                        "add {position} product to cart",
+                        "add {position} product to basket"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
