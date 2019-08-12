@@ -1,8 +1,12 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hybris",
+            "invocationName": "kids quiz",
             "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
                 {
                     "name": "AMAZON.CancelIntent",
                     "samples": []
@@ -16,44 +20,7 @@
                     "samples": []
                 },
                 {
-                    "name": "WelcomeHybrisIntent",
-                    "slots": [],
-                    "samples": [
-                        "welcome hybris",
-                        "say hello",
-                        "say hello Hybris",
-                        "hello",
-                        "say hi",
-                        "say hi hybris",
-                        "hi",
-                        "how are you"
-                    ]
-                },
-                {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
                     "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "ProductSearchIntent",
-                    "slots": [
-                        {
-                            "name": "query",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
-                    "samples": [
-                        "Hybris please find best {query} for me",
-                        "find {query}",
-                        "Hybris find {query} ",
-                        "Hybris find best {query} for me"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NoIntent",
                     "samples": []
                 },
                 {
@@ -61,30 +28,666 @@
                     "samples": []
                 },
                 {
-                    "name": "CartDetailsIntent",
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MathIntent",
                     "slots": [],
                     "samples": [
-                        "go to cart",
-                        "cart details",
-                        "What i have in my cart"
+                        "start math quiz"
                     ]
                 },
                 {
-                    "name": "AddToCartIntent",
+                    "name": "LevelIntent",
                     "slots": [
                         {
-                            "name": "position",
-                            "type": "AMAZON.SearchQuery"
+                            "name": "levelNumber",
+                            "type": "levelNumber"
                         }
                     ],
                     "samples": [
-                        "add {position}",
-                        "add {position} product to cart",
-                        "add {position} product to basket"
+                        "{levelNumber}"
+                    ]
+                },
+                {
+                    "name": "QAIntent",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "answer_slot"
+                        }
+                    ],
+                    "samples": [
+                        "{answer}"
+                    ]
+                },
+                {
+                    "name": "GKIntent",
+                    "slots": [],
+                    "samples": [
+                        "start gk quiz"
+                    ]
+                },
+                {
+                    "name": "RepeatIntent",
+                    "slots": [],
+                    "samples": [
+                        "replay",
+                        "come again",
+                        "say again",
+                        "pardon",
+                        "repeat"
                     ]
                 }
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "levelNumber",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "hard"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "easy"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "answer_slot",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "0"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "south"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "north"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "62"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "23"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "63"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "odd"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "46"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "17"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "40"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "50"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "49"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "0.05"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "690"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "699"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1000"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "955"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "723"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "334"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "100"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "september"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "560"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "66"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "88"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "104"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "86"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "44"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "32"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "125"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "october"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spring"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "35"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "8"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thursday"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "10"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "30"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "31"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "20"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "may"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "friday"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "19"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "saturday"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "autumn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "9"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "abdul kalam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jan gan man"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bangalore"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dhyanchand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "charles babbage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jawaharlal nehru"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "venus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "366"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mumbai"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cricketer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "africa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "new york"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "water"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "52"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "atlantic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tibetan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "resin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mars"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "21"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mount everest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hair"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "japan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "burj khalifa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "greenland"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "swift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mahabharat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sunderban delta"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "suez canal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nelson mandela"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rajendra prasad"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jupiter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "15"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "11"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "asia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "laxman"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "central processing unit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mahrishi balmiki"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "12"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "6"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bulb"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bill gates"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blue whale"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1914"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mercury"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "higher"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "amritsar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lotus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "holi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mango"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "delhi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "republic day"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "humming bird"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "camel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "independence day"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ostrich"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sarojini naidu"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "giraffe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rabindranath tagore"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "24"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "february"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "puppy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "banyan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "26"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "7"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mahatma gandhi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tadpole"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     }
 }
